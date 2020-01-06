@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/products_screen">
+    <fragment
+        android:id="@+id/products_screen"
+        android:name="com.runeanim.birdviewproject.ui.products.ProductsFragment"
+        android:label="Products screen">
+    </fragment>
+</navigation>
