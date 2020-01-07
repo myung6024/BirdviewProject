@@ -14,7 +14,7 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         ApplicationModule::class,
         NetworkModule::class,
-        ApiModule::class,
+        ServiceModule::class,
         ProductsModule::class
     ])
 interface ApplicationComponent : AndroidInjector<BirdApplication> {

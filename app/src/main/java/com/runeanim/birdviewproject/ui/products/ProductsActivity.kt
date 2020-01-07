@@ -20,10 +20,5 @@ class ProductsActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.my_nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

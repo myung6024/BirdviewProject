@@ -1,6 +1,7 @@
 package com.runeanim.birdviewproject.di
 
 import com.google.gson.GsonBuilder
+import com.google.gson.annotations.SerializedName
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.runeanim.birdviewproject.BuildConfig
 import dagger.Module
@@ -8,8 +9,10 @@ import dagger.Provides
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -41,9 +44,30 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideRetrofit(client: OkHttpClient): Retrofit {
+        class EnumConverterFactory : Converter.Factory() {
+            override fun stringConverter(
+                type: Type,
+                annotations: Array<Annotation>,
+                retrofit: Retrofit
+            ): Converter<Enum<*>, String>? =
+                if (type is Class<*> && type.isEnum) {
+                    Converter { enum ->
+                        try {
+                            enum.javaClass.getField(enum.name)
+                                .getAnnotation(SerializedName::class.java)?.value
+                        } catch (exception: Exception) {
+                            null
+                        } ?: enum.toString()
+                    }
+                } else {
+                    null
+                }
+        }
+
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+            .addConverterFactory(EnumConverterFactory())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .client(client)
             .build()

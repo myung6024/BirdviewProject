@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.runeanim.birdviewproject.model.Product" />
+
+        <variable
+            name="viewmodel"
+            type="com.runeanim.birdviewproject.ui.products.ProductsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="172dp"
+            android:layout_height="172dp"
+            android:scaleType="fitXY"
+            app:riv_border_color="#ECECF5"
+            app:riv_border_width="1dp"
+            app:riv_corner_radius="16dp"
+            app:thumbnailImage="@{product.thumbnailImage}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{product.title}"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{product.price.toString()}" />
+    </LinearLayout>
+</layout>

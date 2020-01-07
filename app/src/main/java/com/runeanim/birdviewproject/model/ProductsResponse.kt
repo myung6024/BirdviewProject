@@ -1,6 +1,6 @@
 package com.runeanim.birdviewproject.model
 
-data class ProductsReponse(
+data class ProductsResponse(
     val statusCode: Int,
-    val body: String
+    val body: List<Product>
 )
