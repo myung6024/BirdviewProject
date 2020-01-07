@@ -52,8 +52,4 @@ class ProductDataSource(
     override fun getKey(item: Product): Int {
         return initKey
     }
-
-    override fun invalidate() {
-        super.invalidate()
-    }
 }
