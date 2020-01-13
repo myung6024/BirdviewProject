@@ -15,7 +15,8 @@ import javax.inject.Singleton
         ApplicationModule::class,
         NetworkModule::class,
         ServiceModule::class,
-        ProductsModule::class
+        ProductsModule::class,
+        ProductDetailModule::class
     ])
 interface ApplicationComponent : AndroidInjector<BirdViewApplication> {
 

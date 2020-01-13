@@ -1,6 +1,5 @@
 package com.runeanim.birdviewproject.ui.products
 
-import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +8,6 @@ import com.runeanim.birdviewproject.data.Product
 import com.runeanim.birdviewproject.data.source.ProductsRepository
 import com.runeanim.birdviewproject.util.Event
 import com.runeanim.birdviewproject.util.getSnackbarMessage
-import org.jetbrains.annotations.NotNull
 import java.text.DecimalFormat
 import javax.inject.Inject
 
@@ -26,9 +24,6 @@ class ProductsViewModel @Inject constructor(
     private val _skinType = MutableLiveData<SkinFilterType>(SkinFilterType.OILY)
     val skinType: LiveData<SkinFilterType> = _skinType
 
-    private val _snackbarText = MutableLiveData<Event<Int>>()
-    val snackbarText: LiveData<Event<Int>> = _snackbarText
-
     private var isLoading = false
 
     private var pageNum = 1
@@ -37,6 +32,9 @@ class ProductsViewModel @Inject constructor(
 
     @Inject
     lateinit var formatter: DecimalFormat
+
+    private val _showProductDetailEvent = MutableLiveData<Event<Int>>()
+    val showProductDetailEvent: LiveData<Event<Int>> = _showProductDetailEvent
 
     init {
         loadData()
@@ -96,7 +94,7 @@ class ProductsViewModel @Inject constructor(
         loadData(true)
     }
 
-    private fun showSnackbarMessage(@StringRes message: Int) {
-        _snackbarText.value = Event(message)
+    fun showProductDetail(productId: Int) {
+        _showProductDetailEvent.value = Event(productId)
     }
 }

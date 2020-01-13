@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.runeanim.birdviewproject.R
 import com.runeanim.birdviewproject.databinding.ProductsFragmentBinding
+import com.runeanim.birdviewproject.ui.productdetail.ProductDetailFragment
+import com.runeanim.birdviewproject.util.EventObserver
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
@@ -46,14 +48,19 @@ class ProductsFragment : DaggerFragment() {
         setupSnackBar()
         setupFilterButton()
         setupSearchView()
+        setupEventListener()
+    }
+
+    private fun setupEventListener() {
+        viewModel.showProductDetailEvent.observe(viewLifecycleOwner, EventObserver { productId ->
+            showProductDetail(productId)
+        })
     }
 
     private fun setupSnackBar() {
         view?.let {
-            viewModel.snackbarText.observe(viewLifecycleOwner, Observer { event ->
-                event.getContentIfNotHandled()?.let { resId ->
-                    Snackbar.make(it, resId, Snackbar.LENGTH_SHORT).show()
-                }
+            viewModel.snackbarText.observe(viewLifecycleOwner, EventObserver { resId ->
+                Snackbar.make(it, resId, Snackbar.LENGTH_SHORT).show()
             })
         }
     }
@@ -130,4 +137,13 @@ class ProductsFragment : DaggerFragment() {
                 }
             return builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
+
+    private fun showProductDetail(productId: Int) {
+        activity?.let {
+            val productDetailFragment = ProductDetailFragment()
+            productDetailFragment.arguments =
+                Bundle().apply { putInt(ProductDetailFragment.EXTRA_PRODUCT_ID, productId) }
+            productDetailFragment.show(it.supportFragmentManager, productDetailFragment.tag)
+        }
+    }
 }

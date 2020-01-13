@@ -32,9 +32,11 @@ fun setProductImage(imageView: ImageView, url: String?) {
 }
 
 @BindingAdapter(value = ["app:format", "app:price"])
-fun setPriceText(textView: TextView, formatter: DecimalFormat, price: String) {
-    textView.text =
-        textView.context.getString(R.string.price_format, formatter.format(price.toInt()))
+fun setPriceText(textView: TextView, formatter: DecimalFormat, price: String?) {
+    price?.let {
+        textView.text =
+            textView.context.getString(R.string.price_format, formatter.format(price.toInt()))
+    }
 }
 
 @BindingAdapter("app:hidingScrollListener")
