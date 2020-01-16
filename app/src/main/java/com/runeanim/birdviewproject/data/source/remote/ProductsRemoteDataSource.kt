@@ -1,8 +1,8 @@
 package com.runeanim.birdviewproject.data.source.remote
 
 import com.runeanim.birdviewproject.base.BaseResponse
-import com.runeanim.birdviewproject.data.Product
-import com.runeanim.birdviewproject.data.ProductDetail
+import com.runeanim.birdviewproject.data.model.Product
+import com.runeanim.birdviewproject.data.model.ProductDetail
 import com.runeanim.birdviewproject.data.source.ProductsDataSource
 import com.runeanim.birdviewproject.ui.products.SkinFilterType
 import io.reactivex.Single

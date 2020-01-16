@@ -4,7 +4,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.runeanim.birdviewproject.base.BaseViewModel
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 import com.runeanim.birdviewproject.data.source.ProductsRepository
 import com.runeanim.birdviewproject.util.Event
 import com.runeanim.birdviewproject.util.getSnackbarMessage

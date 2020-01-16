@@ -1,8 +1,8 @@
 package com.runeanim.birdviewproject
 
 import com.runeanim.birdviewproject.base.BaseResponse
-import com.runeanim.birdviewproject.data.Product
-import com.runeanim.birdviewproject.data.ProductDetail
+import com.runeanim.birdviewproject.data.model.Product
+import com.runeanim.birdviewproject.data.model.ProductDetail
 import com.runeanim.birdviewproject.data.source.ProductsRepository
 import com.runeanim.birdviewproject.ui.products.SkinFilterType
 import io.reactivex.Observable
@@ -55,7 +55,16 @@ class FakeRepository : ProductsRepository {
         Single.just(
             BaseResponse(
                 statusCode,
-                ProductDetail(productId, "10000", "", "test1", "testtesttest", 0, 0, 0)
+                ProductDetail(
+                    productId,
+                    "10000",
+                    "",
+                    "test1",
+                    "testtesttest",
+                    0,
+                    0,
+                    0
+                )
             )
         ).doOnSuccess {
             if (statusCode != 200) {

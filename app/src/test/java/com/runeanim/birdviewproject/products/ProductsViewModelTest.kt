@@ -7,7 +7,7 @@ import com.runeanim.birdviewproject.ui.products.ProductsViewModel
 import com.google.common.truth.Truth.assertThat
 import com.runeanim.birdviewproject.LiveDataTestUtil
 import com.runeanim.birdviewproject.R
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 import com.runeanim.birdviewproject.ui.products.SkinFilterType
 import org.junit.Before
 import org.junit.Rule
@@ -41,7 +41,15 @@ class ProductsViewModelTest {
                 Product(7, "10000", "", "test7", 100, 0, 0),
                 Product(1, "10000", "", "test1", 100, 0, 0),
                 Product(2, "10000", "", "test2", 100, 0, 0),
-                Product(3, "10000", "", "test3", 100, 100, 0),
+                Product(
+                    3,
+                    "10000",
+                    "",
+                    "test3",
+                    100,
+                    100,
+                    0
+                ),
                 Product(4, "10000", "", "test4", 0, 100, 0),
                 Product(5, "10000", "", "test5", 0, 100, 0),
                 Product(6, "10000", "", "test6", 0, 100, 0),

@@ -3,7 +3,7 @@ package com.runeanim.birdviewproject.ui.productdetail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.runeanim.birdviewproject.base.BaseViewModel
-import com.runeanim.birdviewproject.data.ProductDetail
+import com.runeanim.birdviewproject.data.model.ProductDetail
 import com.runeanim.birdviewproject.data.source.ProductsRepository
 import com.runeanim.birdviewproject.util.getSnackbarMessage
 import java.text.DecimalFormat

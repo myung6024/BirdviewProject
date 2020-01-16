@@ -7,7 +7,7 @@
 
         <variable
             name="product"
-            type="com.runeanim.birdviewproject.data.Product" />
+            type="com.runeanim.birdviewproject.data.model.Product" />
 
         <variable
             name="viewmodel"

@@ -6,7 +6,7 @@ import com.runeanim.birdviewproject.FakeRepository
 import com.runeanim.birdviewproject.LiveDataTestUtil
 import com.runeanim.birdviewproject.R
 import com.runeanim.birdviewproject.SchedulersRule
-import com.runeanim.birdviewproject.data.ProductDetail
+import com.runeanim.birdviewproject.data.model.ProductDetail
 import com.runeanim.birdviewproject.ui.productdetail.ProductDetailViewModel
 import org.junit.Before
 import org.junit.Rule

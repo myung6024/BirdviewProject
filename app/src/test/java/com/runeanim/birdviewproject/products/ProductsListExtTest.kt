@@ -1,7 +1,7 @@
 package com.runeanim.birdviewproject.products
 
 import com.google.common.truth.Truth
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 import com.runeanim.birdviewproject.ui.products.addData
 import com.runeanim.birdviewproject.ui.products.clearData
 import com.runeanim.birdviewproject.ui.products.removeLoading
@@ -26,8 +26,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)
@@ -48,8 +64,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)
@@ -61,8 +93,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)
@@ -74,8 +122,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)
@@ -88,8 +152,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)
@@ -104,8 +184,24 @@ class ProductsListExtTest {
         Truth.assertThat(
             productList.addData(
                 mutableListOf(
-                    Product(1, "10000", "", "test1", 100, 0, 0),
-                    Product(2, "10000", "", "test2", 100, 0, 0)
+                    Product(
+                        1,
+                        "10000",
+                        "",
+                        "test1",
+                        100,
+                        0,
+                        0
+                    ),
+                    Product(
+                        2,
+                        "10000",
+                        "",
+                        "test2",
+                        100,
+                        0,
+                        0
+                    )
                 )
             )
         ).hasSize(3)

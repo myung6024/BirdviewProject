@@ -1,6 +1,6 @@
 package com.runeanim.birdviewproject.ui.products
 
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 
 fun MutableList<Product?>.addData(newProductList: List<Product>): MutableList<Product?> = apply {
     removeLoading()

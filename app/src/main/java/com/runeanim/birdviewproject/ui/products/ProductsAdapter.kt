@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 import com.runeanim.birdviewproject.databinding.LoadingItemBinding
 import com.runeanim.birdviewproject.databinding.ProductItemBinding
 

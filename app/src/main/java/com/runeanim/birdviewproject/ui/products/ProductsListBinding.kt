@@ -9,7 +9,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.runeanim.birdviewproject.R
-import com.runeanim.birdviewproject.data.Product
+import com.runeanim.birdviewproject.data.model.Product
 import com.runeanim.birdviewproject.util.HidingScrollListener
 import java.text.DecimalFormat
 
