@@ -17,7 +17,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="@dimen/spacing_tiny"
         android:orientation="vertical"
         android:onClick="@{() -> viewmodel.showProductDetail(product.id)}">
 
@@ -27,33 +27,33 @@
             android:scaleType="fitXY"
             app:riv_border_color="@color/itemBorderColor"
             app:riv_border_width="1dp"
-            app:riv_corner_radius="16dp"
+            app:riv_corner_radius="@dimen/radius_normal"
             app:thumbnailImage="@{product.thumbnailImage}"
             tools:src="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:layout_marginEnd="@dimen/spacing_small"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@{product.title}"
             android:textColor="@color/colorTextPrimary"
-            android:textSize="@dimen/text_normal"
+            android:textSize="@dimen/font_normal"
             android:textStyle="bold"
             tools:text="르샤트라1802 악마의 에센스 50ml" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginEnd="@dimen/spacing_small"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/colorTextPrimaryLight"
-            android:textSize="@dimen/text_normal"
+            android:textSize="@dimen/font_normal"
             android:textStyle="bold"
             app:format="@{viewmodel.formatter}"
             app:price="@{product.price}"

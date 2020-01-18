@@ -50,15 +50,15 @@
                     android:id="@+id/title_shimmer_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="34dp"
-                    android:layout_marginEnd="24dp">
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_larger"
+                    android:layout_marginEnd="@dimen/spacing_large">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="32sp"
+                        android:textSize="@dimen/font_title"
                         android:textStyle="bold"
                         app:shimmerLayout="@{titleShimmerLayout}"
                         app:shimmerView="@{titleShimmerView}"
@@ -72,12 +72,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="34dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="34dp"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_larger"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_larger"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/font_larger"
                     android:textStyle="bold"
                     app:format="@{viewmodel.formatter}"
                     app:price="@{viewmodel.product.price}" />
@@ -85,24 +85,24 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginEnd="@dimen/spacing_large"
                     android:background="@color/itemBorderColor" />
 
                 <com.facebook.shimmer.ShimmerFrameLayout
                     android:id="@+id/description_shimmer_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="34dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="34dp">
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_larger"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_larger">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/font_large"
                         android:textStyle="bold"
                         app:shimmerLayout="@{descriptionShimmerLayout}"
                         app:shimmerView="@{descriptionShimmerView}"
@@ -119,10 +119,10 @@
 
         <ImageView
             android:id="@+id/close_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/button_size_normal"
+            android:layout_height="@dimen/button_size_normal"
             android:layout_alignParentEnd="true"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/spacing_normal"
             android:src="@drawable/ic_cancel_black_24dp" />
     </RelativeLayout>
 </layout>
