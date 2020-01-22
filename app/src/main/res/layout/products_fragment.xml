@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.runeanim.birdviewproject.ui.products.ProductsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        tools:context=".ui.products.ProductsFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:focusableInTouchMode="true">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_normal"
+                android:background="@drawable/searchview_bgr"
+                app:defaultQueryHint="@string/search"
+                app:iconifiedByDefault="false" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/products_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingTop="70dp"
+                app:hidingScrollListener="@{filterContainer}"
+                app:items="@{viewmodel.items}"
+                app:loadMoreListener="@{viewmodel.loadMore}"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/product_item"
+                tools:spanCount="2" />
+
+            <RelativeLayout
+                android:id="@+id/filter_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/filter_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/spacing_normal"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                    android:text="@{viewmodel.skinType.stringResId}"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/itemBorderColor" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

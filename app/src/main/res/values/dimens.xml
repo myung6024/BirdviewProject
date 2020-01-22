@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_title">32sp</dimen>
+    <dimen name="font_larger">20sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+
+    <dimen name="spacing_huge">40dp</dimen>
+    <dimen name="spacing_larger">32dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+
+    <dimen name="radius_large">24dp</dimen>
+    <dimen name="radius_normal">16dp</dimen>
+
+    <dimen name="button_size_normal">40dp</dimen>
+</resources>
