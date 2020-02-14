@@ -6,3 +6,6 @@ Dagger2를 사용하여 의존성 주입을 하였으며 Retrofit2와 RxJava를 
 shimmer 라이브러리를 사용하여 데이터 로딩 애니메이션을 구현하였습니다.
 
 코드는 구글 블루프린트(https://github.com/android/architecture-samples)에서 많은 도움을 얻었습니다.
+
+<img width="741" alt="스크린샷 2020-02-13 오전 11 15 21" src="https://user-images.githubusercontent.com/11826473/74518634-87f5bf80-4f57-11ea-807e-dac335cb2bbe.png">
+
